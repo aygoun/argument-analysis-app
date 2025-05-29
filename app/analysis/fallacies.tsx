@@ -104,23 +104,23 @@ export default function FallaciesScreen() {
                   error
                     ? "xmark.circle.fill"
                     : fallacies && fallacies.length > 0
-                    ? "exclamationmark.triangle.fill"
-                    : "checkmark.circle.fill"
+                      ? "exclamationmark.triangle.fill"
+                      : "checkmark.circle.fill"
                 }
                 color={
                   error
                     ? "#FF3B30"
                     : fallacies && fallacies.length > 0
-                    ? "#FF9500"
-                    : "#34C759"
+                      ? "#FF9500"
+                      : "#34C759"
                 }
               />
               <ThemedText type="subtitle" style={styles.resultsTitle}>
                 {error
                   ? "Detection Error"
                   : fallacies && fallacies.length === 0
-                  ? "No fallacies detected"
-                  : `${fallacies?.length || 0} Fallacies Detected`}
+                    ? "No fallacies detected"
+                    : `${fallacies?.length || 0} Fallacies Detected`}
               </ThemedText>
             </ThemedView>
 

@@ -60,7 +60,7 @@ export async function analyzeText(text: string): Promise<AnalysisResponse> {
  * @returns Validation results
  */
 export async function validateArgument(
-  text: string
+  text: string,
 ): Promise<ValidationResponse> {
   try {
     const response = await fetch(`${API_BASE_URL}/api/validate`, {
@@ -120,7 +120,7 @@ export async function sendChatMessage(message: string): Promise<ChatResponse> {
 
     // Always throw an error as requested
     throw new Error(
-      "Chat service is currently unavailable. Please try again later."
+      "Chat service is currently unavailable. Please try again later.",
     );
   } catch (error) {
     console.error("Error sending chat message:", error);
